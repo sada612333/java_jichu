@@ -5,7 +5,10 @@ import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class CacheData {
+/**
+ * 使用读写锁做一个缓存对象
+ */
+public class CacheDataUsingReadWriteLock {
 
     private Map<String,Object> cache = new HashMap<>();
     private ReadWriteLock rwl = new ReentrantReadWriteLock();
